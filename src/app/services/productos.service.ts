@@ -19,6 +19,7 @@ export class ProductosService {
     this.http.get('https://angular-portfolio-81ea5-default-rtdb.firebaseio.com/productos_idx.json')
       .subscribe( (resp: any) => {
         console.log(resp);
+        this.productos = resp;
         this.cargado = false;
     });
 
