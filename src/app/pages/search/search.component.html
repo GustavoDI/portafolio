@@ -1,1 +1,13 @@
-<p>search works!</p>
+<!-- *ngIf="!productoService.cargado" -->
+<div class="rk-portfolio__items" >
+
+    <a *ngFor ="let producto of productoService.productosFiltrado" 
+    [routerLink]="['/item', producto.cod]" class="rk-item rk--flex item rk-size-4 rk-tosize-6 rk-landscape ">
+    <img src="assets/productos/{{producto.url}}.jpg" alt="">
+        <div class="item-meta">
+            <h2>{{producto.titulo}}</h2>
+            <p>{{producto.categoria}}</p>
+        </div>
+    </a>
+    
+</div>
