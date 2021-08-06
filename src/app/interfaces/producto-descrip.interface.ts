@@ -1,4 +1,4 @@
-export interface productCompleto {
+export interface ProductoCompleto {
     categoria: string;
     desc1: string;
     desc2: string;
