@@ -53,7 +53,7 @@
     <div class="rk-portfolio__items" *ngIf="!productosService.cargado">
 
         <a *ngFor ="let producto of productosService.productos" 
-        routerLink="/item" class="rk-item rk--flex item rk-size-4 rk-tosize-6 rk-landscape ">
+        [routerLink]="['/item', producto.cod]" class="rk-item rk--flex item rk-size-4 rk-tosize-6 rk-landscape ">
         <img src="assets/productos/{{producto.url}}.jpg" alt="">
             <div class="item-meta">
                 <h2>{{producto.titulo}}</h2>
