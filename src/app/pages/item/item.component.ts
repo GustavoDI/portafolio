@@ -10,6 +10,10 @@ import { ProductoCompleto } from '../../interfaces/producto-descrip.interface';
 })
 export class ItemComponent implements OnInit {
 
+
+  producto: ProductoCompleto | undefined;
+  id:any[]=[];
+
   constructor( private route: ActivatedRoute,
                private productoService: ProductosService) { }
 
@@ -20,7 +24,9 @@ export class ItemComponent implements OnInit {
         console.log(parametros ['id']);
         this.productoService.getProducto(parametros['id'])
           .subscribe( (producto : any) => {
+            this.id = parametros['id'];
             console.log(producto);
+            this.producto = producto;
           });
 
       });
