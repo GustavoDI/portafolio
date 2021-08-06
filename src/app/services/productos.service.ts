@@ -20,7 +20,7 @@ export class ProductosService {
     
     this.http.get('https://angular-portfolio-81ea5-default-rtdb.firebaseio.com/productos_idx.json')
       .subscribe( (resp: any) => {
-        console.log(resp);
+        // console.log(resp);
         this.productos = resp;
         this.cargado = false;
     });
@@ -43,11 +43,11 @@ export class ProductosService {
     this.productosFiltrado = this.productos.filter(producto =>{
       return true;
     });
-    console.log(this.productosFiltrado);
+    // console.log(this.productosFiltrado);
 
   };
   private filtrarProductos(termino: string){
-    console.log(this.productos);
+    // console.log(this.productos);
     this.productosFiltrado = [];
     termino = termino.toLocaleLowerCase();
 
